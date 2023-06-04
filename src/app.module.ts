@@ -7,13 +7,12 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { NotesModule } from './notes/notes.module';
 import { Notes } from './notes/notes.entity';
-import { DataSource } from 'typeorm';
 
 @Module({
   imports: [
     HttpModule.register({
       headers: {
-        Authorization: process.env.BEARER_TOKEN,
+        //Authorization: process.env.BEARER_TOKEN,
         'Content-Type': 'application/json',
       },
     }),
