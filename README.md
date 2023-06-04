@@ -25,8 +25,12 @@ body:
 
 Or any turkish word.
 
-If you are already using a MySQL instance then the setup is very easy. Just make sure the values in app.module.ts are correct. You will need to add another variable in the .env file.
+If you are already using a MySQL instance then the setup is very easy. Just make sure the values in app.module.ts are correct. 
+
+You will need to add another variable in the .env file.
+
 It should look like this: LOCAL_DATABASE_PASSWORD={your_local_password}.
+
 The only other values you might have to change in app.module.ts are port, username, and database.
 
 If you run into any issues with the setup please let me know (:
