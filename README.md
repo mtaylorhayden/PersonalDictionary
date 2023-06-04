@@ -16,6 +16,8 @@ To hit the openAI API follow these steps:
 
 Now you're ready to hit the api. You can use Postman to hit the endpoint like this:
 URL: `localhost:3001/notes/note`(this is a POST request)
+
+
 body:
 `{
     "question": "what does Vucudumuz mean"
