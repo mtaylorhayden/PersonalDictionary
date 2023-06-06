@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CreateNoteDto } from './model/createNote.dto';
+import { CreateNoteDto } from './model/create-note.dto';
 import { Notes } from './notes.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -20,5 +20,9 @@ export class NotesService {
     console.log('NOTES OBJECT ', notes);
 
     return this.notesRepository.save(createNoteDto);
+  }
+
+  getAll(): Promise<Notes[]> {
+    return this.notesRepository.find();
   }
 }
