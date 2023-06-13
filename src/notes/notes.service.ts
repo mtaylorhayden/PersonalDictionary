@@ -23,6 +23,13 @@ export class NotesService {
   }
 
   getAll(): Promise<Notes[]> {
-    return this.notesRepository.find();
+    return this.notesRepository.find({ where: { isDeleted: false } });
+  }
+
+  async deleteNote(id: number): Promise<void> {
+    let note = await this.notesRepository.findOne({ where: { id } });
+    note.isDeleted = true;
+    this.notesRepository.save(note);
+    console.log('deleteNote ', note);
   }
 }
