@@ -70,9 +70,7 @@ export class ChatGptAiService {
       const { data } = response;
 
       if (data.choices.length) {
-        //const cleanResponse = this.cleanResponse(data.choices);
         return data.choices;
-        //return cleanResponse;
       }
 
       return response.data;

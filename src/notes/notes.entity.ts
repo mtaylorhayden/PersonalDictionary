@@ -13,7 +13,7 @@ export class Notes {
   @Column()
   question: string;
 
-  @Column()
+  @Column('simple-array')
   shortAnswer: string;
 
   @Column()

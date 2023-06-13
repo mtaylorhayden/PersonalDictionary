@@ -10,10 +10,12 @@ export class NotesController {
   @Post('/note')
   createNote(@Body() createNoteDto: CreateNoteDto): Promise<Notes> {
     return this.service.create(createNoteDto);
-  }
+  } 
 
   @Get('/notes')
   getNotes(): Promise<Notes[]> {
-    return this.service.getAll();
+    const res = this.service.getAll();
+    console.log(res);
+    return res;
   }
 }
