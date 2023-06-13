@@ -1,7 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { HttpModule } from '@nestjs/axios';
 import { ChatGptAiModule } from './chat-gpt-ai/chat-gpt-ai.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -10,12 +7,6 @@ import { Notes } from './notes/notes.entity';
 
 @Module({
   imports: [
-    // HttpModule.register({
-    //   headers: {
-    //     //Authorization: process.env.BEARER_TOKEN,
-    //     'Content-Type': 'application/json',
-    //   },
-    // }),
     ConfigModule.forRoot(),
     ChatGptAiModule,
     NotesModule,
