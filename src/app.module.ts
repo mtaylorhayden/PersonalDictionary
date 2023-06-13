@@ -10,12 +10,12 @@ import { Notes } from './notes/notes.entity';
 
 @Module({
   imports: [
-    HttpModule.register({
-      headers: {
-        //Authorization: process.env.BEARER_TOKEN,
-        'Content-Type': 'application/json',
-      },
-    }),
+    // HttpModule.register({
+    //   headers: {
+    //     //Authorization: process.env.BEARER_TOKEN,
+    //     'Content-Type': 'application/json',
+    //   },
+    // }),
     ConfigModule.forRoot(),
     ChatGptAiModule,
     NotesModule,
@@ -31,7 +31,7 @@ import { Notes } from './notes/notes.entity';
       entities: [Notes],
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
